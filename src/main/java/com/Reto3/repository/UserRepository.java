@@ -44,4 +44,8 @@ public class UserRepository {
     public void delete(User user) {
         crudInterface.delete(user);
     }
+    
+    public Optional<User> lastUserId(){
+        return crudInterface.findTopByOrderByIdDesc();
+    }
 }
